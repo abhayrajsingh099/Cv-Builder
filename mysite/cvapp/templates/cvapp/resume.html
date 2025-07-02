@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cv Format</title>
+</head>
+<body style="font-family: 'Calibri', 'Arial', sans-serif; font-size: 15px; color: #222;">
+    <h1 style="font-family: 'Georgia', 'Times New Roman', serif; font-size: 2.2em; margin-bottom: 0.2em;">{{ user_profile.name|capfirst }}</h1>
+    <hr>
+    <p style="font-size: 1em; margin-top: 0;">
+        {{ user_profile.phone }} | 
+        <a href="{{ user_profile.linkedin }}" target="_blank" style="color: #222; text-decoration: underline;">LinkedIn/{{ user_profile.name|cut:" " }}</a> | 
+        {{ user_profile.email }} | 
+        <a href="{{ user_profile.github }}" style="color: #222; text-decoration: underline;">GitHub/{{ user_profile.name|cut:" " }}</a>
+    </p>
+    <br>
+    <p style="font-weight: bold; font-size: 1.1em; margin-bottom: 0.2em;">Education</p>
+    <ul style="margin-top: 0;">
+        <li>School: {{ user_profile.school }}</li>
+        <li>{{ user_profile.degree }} from {{ user_profile.university }}</li>
+    </ul>
+    <hr><br>
+    <p style="font-weight: bold; font-size: 1.1em; margin-bottom: 0.2em;">Projects</p>
+    <ul style="margin-top: 0;">
+        <li>{{ user_profile.project_1 }}</li>
+        <li>{{ user_profile.project_2 }}</li>
+    </ul>
+    <hr><br>
+    <p style="font-weight: bold; font-size: 1.1em; margin-bottom: 0.2em;">Experience</p>
+    <p style="margin-top: 0;">{{ user_profile.previous_work }}</p>
+    <hr><br>
+    <p style="font-weight: bold; font-size: 1.1em; margin-bottom: 0.2em;">Skills</p>
+    <p style="margin-top: 0;">{{ user_profile.skills }}</p>
+
+    <p style="font-weight: bold; font-size: 1.1em; margin-bottom: 0.2em;">Frameworks</p>
+    <p style="margin-top: 0;">{{ user_profile.frameworks }}</p>
+</body>
+</html>
