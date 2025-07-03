@@ -60,7 +60,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'mysite.urls'
-print(ROOT_URLCONF)
 
 TEMPLATES = [
     {
